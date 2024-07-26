@@ -1,0 +1,26 @@
+extend schema
+  @link(
+    url: "https://specs.apollo.dev/federation/v2.7"
+    import: ["@key", "@shareable", "@inaccessible", "@override"]
+  )
+
+type Query {
+    "Retrieves all blog posts"
+    blogs: [BlogPost]
+    "Fetch a blog post by it's ID"
+    blogPost(id: ID!): BlogPost!
+}
+
+type BlogPost {
+    id: ID!
+    "The author of the blog"
+    author: String!
+    "Date of entry"
+    date: String!
+    "Title of the blog post"
+    title: String!
+    "Information about the article"
+    body: String!
+    "Stack information, i.e. GraphQL, Next.js, etc"
+    techStack: [String!]!
+}

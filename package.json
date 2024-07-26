@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "nodemonConfig": {
+    "ext": "*.js, *.graphql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.10.5",
+    "@apollo/subgraph": "^2.8.4",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "nodemon": "^3.1.4"
+  }
+}
